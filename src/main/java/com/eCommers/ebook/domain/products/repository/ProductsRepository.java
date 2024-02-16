@@ -1,5 +1,6 @@
-package com.eCommers.ebook.domain.products;
+package com.eCommers.ebook.domain.products.repository;
 
+import com.eCommers.ebook.domain.products.entity.Products;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

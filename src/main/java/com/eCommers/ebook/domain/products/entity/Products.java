@@ -1,4 +1,4 @@
-package com.eCommers.ebook.domain.products;
+package com.eCommers.ebook.domain.products.entity;
 
 import com.eCommers.ebook.global.BaseEntity;
 import jakarta.persistence.Entity;

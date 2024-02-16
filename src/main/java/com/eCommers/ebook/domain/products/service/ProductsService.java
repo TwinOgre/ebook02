@@ -1,5 +1,6 @@
-package com.eCommers.ebook.domain.products;
+package com.eCommers.ebook.domain.products.service;
 
+import com.eCommers.ebook.domain.products.repository.ProductsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

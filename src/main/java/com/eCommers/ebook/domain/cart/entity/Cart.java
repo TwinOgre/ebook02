@@ -1,6 +1,6 @@
 package com.eCommers.ebook.domain.cart.entity;
 
-import com.eCommers.ebook.domain.products.Products;
+import com.eCommers.ebook.domain.products.entity.Products;
 import com.eCommers.ebook.domain.users.entity.Users;
 import com.eCommers.ebook.global.BaseEntity;
 import jakarta.persistence.Column;

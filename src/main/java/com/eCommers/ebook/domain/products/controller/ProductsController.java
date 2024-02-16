@@ -1,4 +1,4 @@
-package com.eCommers.ebook.domain.products;
+package com.eCommers.ebook.domain.products.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
