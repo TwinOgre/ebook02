@@ -7,12 +7,18 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
 @Entity
 @Getter
+@SuperBuilder(toBuilder = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Cart extends BaseEntity {
 
     @Column
@@ -22,7 +28,7 @@ public class Cart extends BaseEntity {
     private float totalDiscount;
 
     @OneToOne
-    private Users buyers;
+    private Users buyer;
 
     @OneToMany
     private List<Products> productsList;

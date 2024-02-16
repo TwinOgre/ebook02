@@ -16,5 +16,6 @@
 <h4><span>평점: </span>[[${products.averageRating}]]</h4>
 <h4><span>판매자: </span>[[${products.seller.username}]]</h4>
 
+<a th:href="@{|/cart/add/${products.id}|}"> 장바구니 담기</a>
 </body>
 </html>
