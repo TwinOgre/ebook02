@@ -1,10 +1,10 @@
-package com.eCommers.ebook.domain.users;
+package com.eCommers.ebook.domain.products;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 
 @Controller
 @RequiredArgsConstructor
-public class UsersController {
-    private final UsersService usersService;
+public class ProductsController{
+
 }
