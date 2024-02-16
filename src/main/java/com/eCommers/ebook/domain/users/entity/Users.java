@@ -1,12 +1,16 @@
 package com.eCommers.ebook.domain.users.entity;
 
+import com.eCommers.ebook.domain.products.entity.Products;
 import com.eCommers.ebook.global.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -31,4 +35,7 @@ public class Users extends BaseEntity {
 
     @Column
     private boolean isSeller;
+
+    @OneToMany
+    private List<Products> productsList;
 }
