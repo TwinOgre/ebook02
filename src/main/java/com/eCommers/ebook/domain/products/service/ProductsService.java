@@ -49,4 +49,8 @@ public class ProductsService {
     public List<Products> productsList(){
         return this.productsRepository.findAll();
     }
+
+    public Products getProduct(Integer productId) {
+        return this.productsRepository.getReferenceById(productId);
+    }
 }

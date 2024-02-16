@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>eCommers</title>
+</head>
+<body>
+<h2>ProductDetail</h2>
+<h3 th:text="${products.productName}"></h3>
+<div>
+    <span>[[${products.productIntroduce}]]</span>
+</div>
+<h4><span>가격: </span>[[${products.price}]]</h4>
+<h4><span>할인: </span>[[${products.discount}]]</h4>
+
+<h4><span>평점: </span>[[${products.averageRating}]]</h4>
+<h4><span>판매자: </span>[[${products.seller.username}]]</h4>
+
+</body>
+</html>

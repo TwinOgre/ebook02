@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -47,6 +48,13 @@ public class ProductsController{
         this.productsService.createProducts(productsForm, seller);
 
         return "redirect:/products/list";
+    }
+    @GetMapping("/detail/{productId}")
+    public String productDetail(@PathVariable("productId") Integer productId, Model model){
+        Products products = this.productsService.getProduct(productId);
+        model.addAttribute("products", products);
+
+        return "products/productDetail";
     }
 
 
