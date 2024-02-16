@@ -23,7 +23,7 @@ public class Products extends BaseEntity {
     private String productIntroduce;
 
     @Column
-    private Integer price;
+    private int price;
 
     @Column
     private float discount;

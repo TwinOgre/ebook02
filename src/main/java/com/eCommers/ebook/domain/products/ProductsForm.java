@@ -1,6 +1,7 @@
 package com.eCommers.ebook.domain.products;
 
-import jakarta.validation.constraints.NotEmpty;
+import  jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,9 +15,9 @@ public class ProductsForm {
     @NotEmpty(message = "please write productIntroduce")
     private String productIntroduce;
 
-    @NotEmpty(message = "please write price")
-    private Integer price;
+    @NotNull
+    private int price;
 
-    @NotEmpty(message = "please write discount")
+    @NotNull
     private float discount;
 }

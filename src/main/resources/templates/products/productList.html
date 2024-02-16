@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eCommers</title>
+</head>
+<body>
+<h2>Products</h2>
+<a  sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
+<a  sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a>
+<table>
+    <thead>
+        <tr>
+            <th>제품이름</th>
+            <th>제품 가격</th>
+            <th>제품판매자</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="products : ${productsList}">
+            <td th:text="${products.productName}"></td>
+            <td th:text="${products.price}"></td>
+            <td th:text="${products.seller.username}"></td>
+        </tr>
+    </tbody>
+</table>
+<a th:href="@{/products/create}"> 제품 등록하기</a>
+</body>
+</html>

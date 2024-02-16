@@ -8,13 +8,14 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class ProductsService {
     private final ProductsRepository productsRepository;
 
-    public Products createProducts(ProductsForm productsForm, Users seller){
+    public void createProducts(ProductsForm productsForm, Users seller){
         Products products = Products.builder()
                 .productName(productsForm.getProductName())
                 .productIntroduce(productsForm.getProductIntroduce())
@@ -28,9 +29,6 @@ public class ProductsService {
                 .build();
 
         this.productsRepository.save(products);
-
-
-        return products;
     }
 
     public void modifyProducts(ProductsForm productsForm, Products products){
@@ -46,5 +44,9 @@ public class ProductsService {
 
     public void deleteProducts(Products products){
         this.productsRepository.delete(products);
+    }
+
+    public List<Products> productsList(){
+        return this.productsRepository.findAll();
     }
 }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>eCommers</title>
+</head>
+<body>
+<h2>Product Form</h2>
+<form th:action="@{/products/create}" th:object="${productsForm}" method="post">
+    <label for="productName">productName</label>
+    <input type="text" id="productName" name="productName">
+    <label for="productIntroduce">productIntroduce</label>
+    <textarea name="productIntroduce" id="productIntroduce" cols="30" rows="10"></textarea>
+    <label for="price">price</label>
+    <input type="number" id="price" name="price">
+    <label for="discount">discount</label>
+    <input type="number" id="discount" name="discount">
+
+    <button type="submit">products create</button>
+</form>
+</body>
+</html>

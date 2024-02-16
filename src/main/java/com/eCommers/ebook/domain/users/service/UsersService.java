@@ -8,6 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -28,5 +29,13 @@ public class UsersService {
                 .build();
 
         this.usersRepository.save(users);
+    }
+
+    public Users getUsersByName(String UserName){
+        Optional<Users> optionalUsers = this.usersRepository.findByusername(UserName);
+        if(optionalUsers.isEmpty()){
+            throw new RuntimeException();
+        }
+        return optionalUsers.get();
     }
 }
