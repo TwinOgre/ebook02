@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+
 @Service
 @RequiredArgsConstructor
 public class UsersService {
@@ -21,6 +23,8 @@ public class UsersService {
                 .email(usersForm.getEmail())
                 .role("buyer")
                 .isSeller(false)
+                .createDate(LocalDateTime.now())
+                .modifiedDate(LocalDateTime.now())
                 .build();
 
         this.usersRepository.save(users);
