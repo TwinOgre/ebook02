@@ -43,4 +43,8 @@ public class ProductsService {
 
         this.productsRepository.save(productsModify);
     }
+
+    public void deleteProducts(Products products){
+        this.productsRepository.delete(products);
+    }
 }
