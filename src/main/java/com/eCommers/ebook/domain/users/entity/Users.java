@@ -38,6 +38,7 @@ public class Users extends BaseEntity {
     @Column
     private boolean isSeller;
 
+    // 판매자일 때 판매물품
     @OneToMany
     private List<Products> productsList;
 
