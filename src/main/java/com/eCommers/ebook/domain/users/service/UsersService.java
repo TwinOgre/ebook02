@@ -24,6 +24,7 @@ public class UsersService {
                 .email(usersForm.getEmail())
                 .role("buyer")
                 .isSeller(false)
+                .cart(null)
                 .createDate(LocalDateTime.now())
                 .modifiedDate(LocalDateTime.now())
                 .build();

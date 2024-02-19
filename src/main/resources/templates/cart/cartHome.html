@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>eCommers</title>
+</head>
+<body>
+<h2>cart</h2>
+<table>
+    <thead>
+    <tr>
+        <th>제품이름 <span>|</span></th>
+        <th>제품 가격 <span>|</span></th>
+        <th>제품판매자 <span>|</span></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="products : ${productsList}">
+        <td><a th:href="@{|/products/detail/${products.id}|}">[[${products.productName}]]</a></td>
+        <td th:text="${products.price}"></td>
+        <td th:text="${products.seller.username}"></td>
+        <!--   make cart remove button     -->
+<!--        <td><a th:href="@{|/cart/add/${products.id}|}"> 장바구니 담기</a></td>-->
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
